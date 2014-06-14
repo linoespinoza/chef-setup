@@ -13,6 +13,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.box = "opscode-ubuntu-14.04"
   config.vm.box_url = "http://opscode-vm-bento.s3.amazonaws.com/vagrant/virtualbox/opscode_ubuntu-14.04_chef-provisionerless.box"
 
+  config.vm.forward_port 80, 8080
+
   config.omnibus.chef_version = :latest
   # The url from where the 'config.vm.box' box will be fetched if it
   # doesn't already exist on the user's system.
